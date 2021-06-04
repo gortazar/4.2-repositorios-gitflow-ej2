@@ -20,15 +20,15 @@ import java.io.File;
 public class WikipediaTest {
 
 	@Container
-    public static BrowserWebDriverContainer chrome = new BrowserWebDriverContainer()
-		.withCapabilities(DesiredCapabilities.chrome())
+    public static BrowserWebDriverContainer firefox = new BrowserWebDriverContainer()
+		.withCapabilities(DesiredCapabilities.firefox())
 		.withRecordingMode(RECORD_ALL, new File("target"));
 
 	private RemoteWebDriver driver;
 
 	@BeforeEach
 	public void setupTest() {
-		driver = chrome.getWebDriver();
+		driver = firefox.getWebDriver();
 	}
 
 	@AfterEach
